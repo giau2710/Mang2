@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,button{
+            height: 50px;
+            width: 300px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" >
+        <h2>Tiếng anh sang tiếng Việt: <input type="text" name="Tien" id="Tien" width="500px"></h2>
+    <input type="submit" value="Covid" onclick="Translate()">
+</form>
+
+<div id="result" style="font-size: 100px; color:rgb(200, 30, 70);"></div>
+    
+    <script>
+        function Translate(){
+            let english=["table","cat","dog","car","bus","plane","Rich"];
+            let vietNamese=["bàn","con mèo","con chó"," ô tô","xe buýt","máy bay","Giàu top 1 thế giới"];
+            let index= english.indexOf(document.getElementById("Tien").value);
+            document.getElementById("result").innerHTML = vietNamese[index];    
+        }
+    </script>
+    
+</body>
+</html>
